@@ -1,4 +1,4 @@
-
+<h1 id="demo"></h1>
 <script>
 	let addCatch = document.createElement("button");
 	let addDrop = document.createElement("button");
@@ -8,17 +8,18 @@
 	document.body.appendChild(addDrop);
 	let catches = 0;
 	let drops = 0;
-	let cdratio;
-	let header = document.querySelector("h1");
 	addCatch.onclick = function () {
 		catches += 1;
-		cdratio = catches / drops;
-		header.innerText = cdratio;
+		let cdratio = catches / drops;
+		console.log(cdratio);
+		document.getElementById("demo").innerHTML = catches / drops;
 	}
 	addDrop.onclick = function () {
 		drops += 1;
-		cdratio = catches / drops;
-		header.innerText = cdratio;
+		let cdratio = catches / drops;
+		console.log(cdratio);
+		document.getElementById("demo").innerHTML = catches / drops;
 	}
 	
 </script>
+<br>
