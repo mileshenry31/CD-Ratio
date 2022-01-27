@@ -1,0 +1,24 @@
+
+<script>
+	let addCatch = document.createElement("button");
+	let addDrop = document.createElement("button");
+	addCatch.innerHTML = "Add Catch";
+	addDrop.innerHTML = "Add Drop";
+	document.body.appendChild(addCatch);
+	document.body.appendChild(addDrop);
+	let catches = 0;
+	let drops = 0;
+	let cdratio;
+	let header = document.querySelector("h1");
+	addCatch.onclick = function () {
+		catches += 1;
+		cdratio = catches / drops;
+		header.innerText = cdratio;
+	}
+	addDrop.onclick = function () {
+		drops += 1;
+		cdratio = catches / drops;
+		header.innerText = cdratio;
+	}
+	
+</script>
